@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Valbona Bajrami — @freespiritvb</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --gold: #C9A96E;
@@ -23,7 +23,7 @@
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Raleway', sans-serif;
     background: var(--ivory);
     color: var(--dark);
     overflow-x: hidden;
@@ -40,9 +40,9 @@
     transition: padding 0.4s;
   }
   .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: 0.25em;
     color: var(--dark);
     text-transform: uppercase;
@@ -52,7 +52,7 @@
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
   .nav-links a {
     font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--mid); text-decoration: none; font-weight: 400;
+    color: var(--mid); text-decoration: none; font-weight: 500;
     transition: color 0.3s;
     position: relative;
   }
@@ -81,14 +81,15 @@
     font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase;
     color: var(--gold); margin-bottom: 1.5rem;
     display: flex; align-items: center; gap: 1rem;
+    font-weight: 500;
   }
   .hero-eyebrow::before {
     content: ''; display: block; width: 2.5rem; height: 1px; background: var(--gold);
   }
   .hero-name {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: clamp(4.5rem, 7vw, 7.5rem);
-    font-weight: 300;
+    font-weight: 400;
     line-height: 0.9;
     letter-spacing: -0.01em;
     color: var(--dark);
@@ -101,6 +102,7 @@
   .hero-title {
     font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase;
     color: var(--soft); margin-bottom: 1.2rem;
+    font-weight: 500;
   }
   .hero-desc {
     font-size: 0.95rem; line-height: 1.8; color: var(--mid);
@@ -120,12 +122,13 @@
     padding-top: 2.5rem; border-top: 1px solid rgba(201,169,110,0.25);
   }
   .hero-stat-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.2rem; font-weight: 300; color: var(--gold); line-height: 1;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem; font-weight: 400; color: var(--gold); line-height: 1;
   }
   .hero-stat-label {
     font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--soft); margin-top: 0.3rem;
+    font-weight: 500;
   }
   .hero-image {
     position: relative; overflow: hidden;
@@ -142,6 +145,7 @@
     font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
     color: rgba(255,255,255,0.7);
     writing-mode: vertical-rl;
+    font-weight: 500;
   }
 
   /* ── SECTION SHARED ── */
@@ -150,14 +154,15 @@
     font-size: 0.62rem; letter-spacing: 0.35em; text-transform: uppercase;
     color: var(--gold); display: flex; align-items: center; gap: 1rem;
     margin-bottom: 1.5rem;
+    font-weight: 500;
   }
   .section-label::after {
     content: ''; flex: 1; height: 1px; background: rgba(201,169,110,0.3); max-width: 3rem;
   }
   .section-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: clamp(2.8rem, 4vw, 4.2rem);
-    font-weight: 300; line-height: 1.05;
+    font-weight: 400; line-height: 1.05;
     color: var(--dark);
   }
   .section-title em { font-style: italic; color: var(--gold); }
@@ -193,8 +198,8 @@
   }
   .about-text + .about-text { margin-top: 0; }
   .about-quote {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem; font-style: italic; font-weight: 300;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; font-style: italic; font-weight: 400;
     color: var(--gold); line-height: 1.5;
     border-left: 2px solid var(--gold-light);
     padding-left: 1.5rem; margin: 2rem 0;
@@ -204,6 +209,7 @@
     font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase;
     color: var(--gold); border: 1px solid rgba(201,169,110,0.4);
     padding: 0.4rem 0.9rem;
+    font-weight: 500;
   }
 
   /* ── AERIAL ── */
@@ -266,6 +272,7 @@
     padding-bottom: 0.8rem; margin-bottom: -0.8rem;
     border-bottom: 2px solid transparent;
     transition: color 0.3s, border-color 0.3s;
+    font-weight: 500;
   }
   .portfolio-filter li.active,
   .portfolio-filter li:hover { color: var(--gold); border-color: var(--gold); }
@@ -293,6 +300,7 @@
   .portfolio-overlay-text {
     font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--gold-light);
+    font-weight: 500;
   }
 
   /* ── SERVICES ── */
@@ -315,13 +323,13 @@
   .service-card:hover { background: var(--ivory); }
   .service-card:hover::before { height: 100%; }
   .service-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem; font-weight: 300; color: rgba(201,169,110,0.2);
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem; font-weight: 400; color: rgba(201,169,110,0.2);
     line-height: 1; margin-bottom: 1.5rem;
   }
   .service-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem; font-weight: 400; color: var(--dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; font-weight: 500; color: var(--dark);
     margin-bottom: 1rem;
   }
   .service-desc {
@@ -354,9 +362,9 @@
     max-width: 400px; margin: 0 auto 3.5rem;
   }
   .contact-email {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: clamp(1.2rem, 2.5vw, 2rem);
-    color: var(--gold-light); font-weight: 300;
+    color: var(--gold-light); font-weight: 400;
     letter-spacing: 0.05em;
     display: block; text-decoration: none; margin-bottom: 3rem;
     transition: color 0.3s;
@@ -370,6 +378,7 @@
     font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
     color: rgba(255,255,255,0.4); text-decoration: none;
     transition: color 0.3s;
+    font-weight: 500;
   }
   .contact-social a:hover { color: var(--gold); }
 
@@ -383,6 +392,7 @@
   footer p {
     font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase;
     color: rgba(255,255,255,0.25);
+    font-weight: 500;
   }
 
   /* ── SCROLL FADE IN ── */
@@ -577,4 +587,103 @@
       <img src="images/culture1.jpg" alt="Drone shot">
       <div class="portfolio-overlay"><span class="portfolio-overlay-text">Culture · Afghanistan</span></div>
     </div>
-    <div class="portfolio-item" data-category="culture
+    <div class="portfolio-item" data-category="culture">
+      <img src="images/culture2.jpeg" alt="Drone shot">
+      <div class="portfolio-overlay"><span class="portfolio-overlay-text">Culture · Mongolia</span></div>
+    </div>
+    
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="fade-up" style="text-align:center; max-width:550px; margin:0 auto 1rem">
+    <div class="section-label" style="justify-content:center">What I Offer</div>
+    <h2 class="section-title">Services &amp; <em>Specialties</em></h2>
+  </div>
+  <div class="services-grid fade-up">
+    <div class="service-card">
+      <div class="service-num">01</div>
+      <h3 class="service-name">Travel Photography</h3>
+      <p class="service-desc">Documenting the world's most breathtaking destinations across 100+ countries, for brands, publications, and personal stories.</p>
+      <ul class="service-list">
+        <li>Destination campaigns</li>
+        <li>Tourism brand content</li>
+        <li>Travel publication editorial</li>
+        <li>Lifestyle storytelling</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <h3 class="service-name">Aerial &amp; Drone</h3>
+      <p class="service-desc">Certified drone photography and videography offering a perspective most photographers can't reach, the view from above.</p>
+      <ul class="service-list">
+        <li>Landscape reveals</li>
+        <li>Real estate &amp; architecture</li>
+        <li>Event aerial coverage</li>
+        <li>Cinematic reels</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <h3 class="service-name">Wedding &amp; Events</h3>
+      <p class="service-desc">Capturing the authentic emotion and cultural richness of your most meaningful moments, with sensitivity and artistic vision.</p>
+      <ul class="service-list">
+        <li>Wedding coverage</li>
+        <li>Cultural celebrations</li>
+        <li>Portrait sessions</li>
+        <li>Event documentation</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-label fade-up">Let's Connect</div>
+  <h2 class="section-title fade-up">Ready to Tell<br><em>Your Story?</em></h2>
+  <p class="contact-sub fade-up">Whether you're a brand seeking visual content, a publication looking for authentic travel imagery, or planning a celebration you want beautifully documented,  I'd love to hear from you.</p>
+  <a href="mailto:freespiritvb@gmail.com" class="contact-email fade-up">freespiritvb@gmail.com</a>
+  <ul class="contact-social fade-up">
+    <li><a href="https://instagram.com/freespiritvb" target="_blank">@freespiritvb</a></li>
+  </ul>
+</section>
+
+<footer>
+  <p>© 2026 Valbona Bajrami. All rights reserved.</p>
+</footer>
+
+<script>
+  // Scroll fade
+  const faders = document.querySelectorAll('.fade-up');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.12 });
+  faders.forEach(el => obs.observe(el));
+
+  // Portfolio filter logic (UPDATED TO ACTUALLY FILTER IMAGES)
+  const filterBtns = document.querySelectorAll('.portfolio-filter li');
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // 1. Remove active class from all buttons
+      filterBtns.forEach(x => x.classList.remove('active'));
+      // 2. Add active class to clicked button
+      btn.classList.add('active');
+
+      // 3. Get the category we want to show
+      const filterValue = btn.getAttribute('data-filter');
+
+      // 4. Hide/Show items based on category
+      portfolioItems.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        if (filterValue === 'all' || filterValue === itemCategory) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
