@@ -281,6 +281,7 @@
   .portfolio-item {
     break-inside: avoid; margin-bottom: 14px;
     overflow: hidden; position: relative; cursor: pointer;
+    transition: opacity 0.4s ease;
   }
   .portfolio-item img {
     width: 100%; display: block;
@@ -537,47 +538,47 @@
       <h2 class="section-title">Selected<br><em>Work</em></h2>
     </div>
     <ul class="portfolio-filter">
-      <li class="active">All</li>
-      <li>Nature</li>
-      <li>Travel</li>
-      <li>Wedding</li>
-      <li>Culture</li>
+      <li class="active" data-filter="all">All</li>
+      <li data-filter="nature">Nature</li>
+      <li data-filter="travel">Travel</li>
+      <li data-filter="wedding">Wedding</li>
+      <li data-filter="culture">Culture</li>
     </ul>
   </div>
   <div class="portfolio-masonry fade-up">
-    <div class="portfolio-item">
+    <div class="portfolio-item" data-category="nature">
       <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500&q=80" alt="Nature">
       <div class="portfolio-overlay"><span class="portfolio-overlay-text">Nature · Iceland</span></div>
     </div>
-    <div class="portfolio-item">
+    <div class="portfolio-item" data-category="travel">
       <img src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?w=500&q=80" alt="Travel">
       <div class="portfolio-overlay"><span class="portfolio-overlay-text">Travel · Maldives</span></div>
     </div>
-    <div class="portfolio-item">
+    <div class="portfolio-item" data-category="wedding">
       <img src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=500&q=80" alt="Wedding">
       <div class="portfolio-overlay"><span class="portfolio-overlay-text">Wedding · Chicago</span></div>
     </div>
-    <div class="portfolio-item">
+    <div class="portfolio-item" data-category="culture">
       <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=500&q=80" alt="Landscape">
       <div class="portfolio-overlay"><span class="portfolio-overlay-text">Landscape · Morocco</span></div>
     </div>
-    <div class="portfolio-item">
+    <div class="portfolio-item" data-category="travel">
       <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&q=80" alt="Mountain">
       <div class="portfolio-overlay"><span class="portfolio-overlay-text">Travel · Indonesia</span></div>
     </div>
-    <div class="portfolio-item">
+    <div class="portfolio-item" data-category="travel">
       <img src="https://images.unsplash.com/photo-1520962922320-2038eebab146?w=500&q=80" alt="Aerial sea">
       <div class="portfolio-overlay"><span class="portfolio-overlay-text">Aerial · Mauritius</span></div>
     </div>
-    <div class="portfolio-item">
+    <div class="portfolio-item" data-category="nature">
       <img src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=500&q=80" alt="Forest">
       <div class="portfolio-overlay"><span class="portfolio-overlay-text">Nature · New Zealand</span></div>
     </div>
-    <div class="portfolio-item">
+    <div class="portfolio-item" data-category="travel">
       <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=500&q=80" alt="Mountains">
       <div class="portfolio-overlay"><span class="portfolio-overlay-text">Travel · Dolomites</span></div>
     </div>
-    <div class="portfolio-item">
+    <div class="portfolio-item" data-category="culture">
       <img src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=500&q=80" alt="Drone shot">
       <div class="portfolio-overlay"><span class="portfolio-overlay-text">Aerial · Thailand</span></div>
     </div>
@@ -652,11 +653,29 @@
   }, { threshold: 0.12 });
   faders.forEach(el => obs.observe(el));
 
-  // Portfolio filter (visual only)
-  document.querySelectorAll('.portfolio-filter li').forEach(li => {
-    li.addEventListener('click', () => {
-      document.querySelectorAll('.portfolio-filter li').forEach(x => x.classList.remove('active'));
-      li.classList.add('active');
+  // Portfolio filter logic (UPDATED TO ACTUALLY FILTER IMAGES)
+  const filterBtns = document.querySelectorAll('.portfolio-filter li');
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // 1. Remove active class from all buttons
+      filterBtns.forEach(x => x.classList.remove('active'));
+      // 2. Add active class to clicked button
+      btn.classList.add('active');
+
+      // 3. Get the category we want to show
+      const filterValue = btn.getAttribute('data-filter');
+
+      // 4. Hide/Show items based on category
+      portfolioItems.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        if (filterValue === 'all' || filterValue === itemCategory) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
     });
   });
 </script>
