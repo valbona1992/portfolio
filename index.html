@@ -8,14 +8,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --gold: #C9A96E;
-    --gold-light: #E8D5A8;
-    --gold-pale: #F5EDD8;
-    --ivory: #FDFAF4;
+    /* CHANGED TO SAGE & LINEN THEME */
+    --gold: #828E7D;       
+    --gold-light: #A3AD9F;
+    --gold-pale: #DDE1DA;
+    --ivory: #F9F7F2;      
     --white: #FFFFFF;
-    --dark: #1A1814;
-    --mid: #4A4540;
-    --soft: #8C8070;
+    --dark: #2C2E2B;       
+    --mid: #52554F;
+    --soft: #8C8E8A;
   }
 
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -34,9 +35,9 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
     padding: 1.4rem 4rem;
-    background: rgba(253, 250, 244, 0.92);
+    background: rgba(249, 247, 242, 0.92); /* Matched to Ivory */
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(201,169,110,0.2);
+    border-bottom: 1px solid rgba(130, 142, 125, 0.2);
     transition: padding 0.4s;
   }
   .nav-logo {
@@ -119,7 +120,7 @@
   .hero-cta:hover { color: var(--gold); gap: 1.5rem; }
   .hero-stat-row {
     display: flex; gap: 3rem; margin-top: 4rem;
-    padding-top: 2.5rem; border-top: 1px solid rgba(201,169,110,0.25);
+    padding-top: 2.5rem; border-top: 1px solid rgba(130, 142, 125, 0.25);
   }
   .hero-stat-num {
     font-family: 'Playfair Display', serif;
@@ -157,7 +158,7 @@
     font-weight: 500;
   }
   .section-label::after {
-    content: ''; flex: 1; height: 1px; background: rgba(201,169,110,0.3); max-width: 3rem;
+    content: ''; flex: 1; height: 1px; background: rgba(130, 142, 125, 0.3); max-width: 3rem;
   }
   .section-title {
     font-family: 'Playfair Display', serif;
@@ -182,7 +183,7 @@
   .about-image-accent {
     position: absolute; bottom: -1.5rem; right: -1.5rem;
     width: 60%; height: 60%;
-    border: 1px solid rgba(201,169,110,0.4);
+    border: 1px solid rgba(130, 142, 125, 0.4);
     z-index: -1;
   }
   .about-image-tag {
@@ -207,7 +208,7 @@
   .about-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem; }
   .about-tag {
     font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--gold); border: 1px solid rgba(201,169,110,0.4);
+    color: var(--gold); border: 1px solid rgba(130, 142, 125, 0.4);
     padding: 0.4rem 0.9rem;
     font-weight: 500;
   }
@@ -250,7 +251,7 @@
   .aerial-grid-item:hover img { transform: scale(1.06); filter: brightness(1); }
   .aerial-grid-item::after {
     content: ''; position: absolute; inset: 0;
-    background: linear-gradient(to top, rgba(201,169,110,0.2) 0%, transparent 50%);
+    background: linear-gradient(to top, rgba(130, 142, 125, 0.2) 0%, transparent 50%);
     opacity: 0; transition: opacity 0.4s;
   }
   .aerial-grid-item:hover::after { opacity: 1; }
@@ -263,7 +264,7 @@
   }
   .portfolio-filter {
     display: flex; gap: 2rem; list-style: none;
-    border-bottom: 1px solid rgba(201,169,110,0.2);
+    border-bottom: 1px solid rgba(130, 142, 125, 0.2);
     padding-bottom: 0.8rem;
   }
   .portfolio-filter li {
@@ -292,7 +293,7 @@
   .portfolio-item:hover img { transform: scale(1.04); filter: brightness(1); }
   .portfolio-overlay {
     position: absolute; inset: 0;
-    background: linear-gradient(to top, rgba(26,24,20,0.7) 0%, transparent 60%);
+    background: linear-gradient(to top, rgba(44, 46, 43, 0.7) 0%, transparent 60%);
     opacity: 0; transition: opacity 0.4s;
     display: flex; align-items: flex-end; padding: 1.5rem;
   }
@@ -311,7 +312,7 @@
   }
   .service-card {
     padding: 3rem 2.5rem;
-    border: 1px solid rgba(201,169,110,0.15);
+    border: 1px solid rgba(130, 142, 125, 0.15);
     position: relative; overflow: hidden;
     transition: background 0.4s;
   }
@@ -324,7 +325,7 @@
   .service-card:hover::before { height: 100%; }
   .service-num {
     font-family: 'Playfair Display', serif;
-    font-size: 3rem; font-weight: 400; color: rgba(201,169,110,0.2);
+    font-size: 3rem; font-weight: 400; color: rgba(130, 142, 125, 0.2);
     line-height: 1; margin-bottom: 1.5rem;
   }
   .service-name {
@@ -340,7 +341,7 @@
   }
   .service-list li {
     font-size: 0.75rem; letter-spacing: 0.1em; color: var(--mid);
-    padding: 0.4rem 0; border-bottom: 1px solid rgba(201,169,110,0.12);
+    padding: 0.4rem 0; border-bottom: 1px solid rgba(130, 142, 125, 0.12);
     display: flex; align-items: center; gap: 0.6rem;
   }
   .service-list li::before {
@@ -355,7 +356,7 @@
   }
   .contact .section-label { justify-content: center; }
   .contact .section-label::after { display: none; }
-  .contact .section-label::before { content: ''; flex: 0 0 3rem; height: 1px; background: rgba(201,169,110,0.3); }
+  .contact .section-label::before { content: ''; flex: 0 0 3rem; height: 1px; background: rgba(130, 142, 125, 0.3); }
   .contact .section-title { color: var(--white); margin-bottom: 1.5rem; }
   .contact-sub {
     font-size: 0.95rem; color: rgba(255,255,255,0.5); font-weight: 300; line-height: 1.8;
@@ -384,10 +385,10 @@
 
   /* ── FOOTER ── */
   footer {
-    background: #0F0E0B;
+    background: #1A1C19; /* Matched to Darker Sage */
     padding: 2rem 5rem;
     display: flex; align-items: center; justify-content: center;
-    border-top: 1px solid rgba(201,169,110,0.1);
+    border-top: 1px solid rgba(130, 142, 125, 0.1);
   }
   footer p {
     font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase;
@@ -409,7 +410,7 @@
     display: flex; align-items: center; gap: 1rem; margin: 3rem 0;
   }
   .gold-divider span {
-    display: block; height: 1px; flex: 1; background: rgba(201,169,110,0.25);
+    display: block; height: 1px; flex: 1; background: rgba(130, 142, 125, 0.25);
   }
   .gold-divider .diamond {
     width: 5px; height: 5px; background: var(--gold);
@@ -563,7 +564,6 @@
       <div class="portfolio-overlay"><span class="portfolio-overlay-text">Wedding · Macedonia</span></div>
     </div>
     
-  
     <div class="portfolio-item" data-category="travel">
       <img src="images/travel2.jpeg" alt="Mountain">
       <div class="portfolio-overlay"><span class="portfolio-overlay-text">Travel · Greece</span></div>
@@ -581,8 +581,6 @@
       <div class="portfolio-overlay"><span class="portfolio-overlay-text">Travel · China</span></div>
     </div>
     
-
-   
     <div class="portfolio-item" data-category="culture">
       <img src="images/culture1.jpg" alt="Drone shot">
       <div class="portfolio-overlay"><span class="portfolio-overlay-text">Culture · Afghanistan</span></div>
@@ -591,7 +589,6 @@
       <img src="images/culture2.jpeg" alt="Drone shot">
       <div class="portfolio-overlay"><span class="portfolio-overlay-text">Culture · Mongolia</span></div>
     </div>
-    
   </div>
 </section>
 
@@ -659,21 +656,15 @@
   }, { threshold: 0.12 });
   faders.forEach(el => obs.observe(el));
 
-  // Portfolio filter logic (UPDATED TO ACTUALLY FILTER IMAGES)
+  // Portfolio filter logic
   const filterBtns = document.querySelectorAll('.portfolio-filter li');
   const portfolioItems = document.querySelectorAll('.portfolio-item');
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      // 1. Remove active class from all buttons
       filterBtns.forEach(x => x.classList.remove('active'));
-      // 2. Add active class to clicked button
       btn.classList.add('active');
-
-      // 3. Get the category we want to show
       const filterValue = btn.getAttribute('data-filter');
-
-      // 4. Hide/Show items based on category
       portfolioItems.forEach(item => {
         const itemCategory = item.getAttribute('data-category');
         if (filterValue === 'all' || filterValue === itemCategory) {
