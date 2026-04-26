@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Valbona Bajrami — Free Spirit VB</title>
+<title>Valbona Bajrami — @freespiritvb</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -142,12 +142,6 @@
     font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
     color: rgba(255,255,255,0.7);
     writing-mode: vertical-rl;
-  }
-  .hero-corner-deco {
-    position: absolute; bottom: -1px; left: 0;
-    width: 120px; height: 120px;
-    background: var(--ivory);
-    clip-path: polygon(0 100%, 100% 100%, 0 0);
   }
 
   /* ── SECTION SHARED ── */
@@ -476,7 +470,6 @@
   <div class="hero-image">
     <img src="images/hero.jpeg" alt="Aerial landscape photography by Valbona Bajrami">
     <div class="hero-image-caption">Tumpak Sewu Waterfall</div>
-    <div class="hero-corner-deco"></div>
   </div>
 </section>
 
@@ -580,121 +573,4 @@
     </div>
     <div class="portfolio-item" data-category="travel">
       <img src="images/travel3.JPG" alt="Mountain">
-      <div class="portfolio-overlay"><span class="portfolio-overlay-text">Travel · India</span></div>
-    </div>
-    <div class="portfolio-item" data-category="travel">
-      <img src="images/travel4.JPG" alt="Mountain">
-      <div class="portfolio-overlay"><span class="portfolio-overlay-text">Travel · Mongolia</span></div>
-    </div>
-    <div class="portfolio-item" data-category="travel">
-      <img src="images/travel5.jpg" alt="Mountain">
-      <div class="portfolio-overlay"><span class="portfolio-overlay-text">Travel · China</span></div>
-    </div>
-    
-
-   
-    <div class="portfolio-item" data-category="culture">
-      <img src="images/culture1.jpg" alt="Drone shot">
-      <div class="portfolio-overlay"><span class="portfolio-overlay-text">Culture · Afghanistan</span></div>
-    </div>
-    <div class="portfolio-item" data-category="culture">
-      <img src="images/culture2.jpeg" alt="Drone shot">
-      <div class="portfolio-overlay"><span class="portfolio-overlay-text">Culture · Mongolia</span></div>
-    </div>
-    
-  </div>
-</section>
-
-<section class="services" id="services">
-  <div class="fade-up" style="text-align:center; max-width:550px; margin:0 auto 1rem">
-    <div class="section-label" style="justify-content:center">What I Offer</div>
-    <h2 class="section-title">Services &amp; <em>Specialties</em></h2>
-  </div>
-  <div class="services-grid fade-up">
-    <div class="service-card">
-      <div class="service-num">01</div>
-      <h3 class="service-name">Travel Photography</h3>
-      <p class="service-desc">Documenting the world's most breathtaking destinations across 100+ countries, for brands, publications, and personal stories.</p>
-      <ul class="service-list">
-        <li>Destination campaigns</li>
-        <li>Tourism brand content</li>
-        <li>Travel publication editorial</li>
-        <li>Lifestyle storytelling</li>
-      </ul>
-    </div>
-    <div class="service-card">
-      <div class="service-num">02</div>
-      <h3 class="service-name">Aerial &amp; Drone</h3>
-      <p class="service-desc">Certified drone photography and videography offering a perspective most photographers can't reach, the view from above.</p>
-      <ul class="service-list">
-        <li>Landscape reveals</li>
-        <li>Real estate &amp; architecture</li>
-        <li>Event aerial coverage</li>
-        <li>Cinematic reels</li>
-      </ul>
-    </div>
-    <div class="service-card">
-      <div class="service-num">03</div>
-      <h3 class="service-name">Wedding &amp; Events</h3>
-      <p class="service-desc">Capturing the authentic emotion and cultural richness of your most meaningful moments, with sensitivity and artistic vision.</p>
-      <ul class="service-list">
-        <li>Wedding coverage</li>
-        <li>Cultural celebrations</li>
-        <li>Portrait sessions</li>
-        <li>Event documentation</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="section-label fade-up">Let's Connect</div>
-  <h2 class="section-title fade-up">Ready to Tell<br><em>Your Story?</em></h2>
-  <p class="contact-sub fade-up">Whether you're a brand seeking visual content, a publication looking for authentic travel imagery, or planning a celebration you want beautifully documented,  I'd love to hear from you.</p>
-  <a href="mailto:hello@freespiritvb.com" class="contact-email fade-up">freespiritvb@gmail.com</a>
-  <ul class="contact-social fade-up">
-    <li><a href="#">Instagram</a></li>
-    <li><a href="#">@freespiritvb</a></li>
-  </ul>
-</section>
-
-<footer>
-  <p>© 2026 Valbona Bajrami. All rights reserved.</p>
-</footer>
-
-<script>
-  // Scroll fade
-  const faders = document.querySelectorAll('.fade-up');
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-  }, { threshold: 0.12 });
-  faders.forEach(el => obs.observe(el));
-
-  // Portfolio filter logic (UPDATED TO ACTUALLY FILTER IMAGES)
-  const filterBtns = document.querySelectorAll('.portfolio-filter li');
-  const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // 1. Remove active class from all buttons
-      filterBtns.forEach(x => x.classList.remove('active'));
-      // 2. Add active class to clicked button
-      btn.classList.add('active');
-
-      // 3. Get the category we want to show
-      const filterValue = btn.getAttribute('data-filter');
-
-      // 4. Hide/Show items based on category
-      portfolioItems.forEach(item => {
-        const itemCategory = item.getAttribute('data-category');
-        if (filterValue === 'all' || filterValue === itemCategory) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    });
-  });
-</script>
-</body>
-</html>
+      <div class="portfolio-overlay"><span class="portfolio-overlay-text">
