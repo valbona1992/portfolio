@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Valbona Bajrami — @freespiritvb</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
 <style>
   :root {
     /* SAGE & LINEN THEME */
@@ -17,6 +18,10 @@
     --dark: #2C2E2B;       
     --mid: #52554F;
     --soft: #8C8E8A;
+
+    /* FONTS */
+    --font-sans: 'DM Sans', sans-serif;
+    --font-serif: 'Cormorant Garamond', serif;
   }
 
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -24,7 +29,7 @@
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-sans);
     background: var(--ivory);
     color: var(--dark);
     overflow-x: hidden;
@@ -108,7 +113,7 @@
     content: ''; display: block; width: 2.5rem; height: 1px; background: var(--gold);
   }
   .hero-name {
-    font-family: 'Cinzel', serif;
+    font-family: var(--font-serif);
     font-size: clamp(3.5rem, 6vw, 6.5rem);
     font-weight: 400;
     line-height: 1.1;
@@ -144,7 +149,7 @@
     padding-top: 2.5rem; border-top: 1px solid rgba(130, 142, 125, 0.25);
   }
   .hero-stat-num {
-    font-family: 'Cinzel', serif;
+    font-family: var(--font-serif);
     font-size: 2rem; font-weight: 400; color: var(--gold); line-height: 1;
   }
   .hero-stat-label {
@@ -182,7 +187,7 @@
     content: ''; flex: 1; height: 1px; background: rgba(130, 142, 125, 0.3); max-width: 3rem;
   }
   .section-title {
-    font-family: 'Cinzel', serif;
+    font-family: var(--font-serif);
     font-size: clamp(2.5rem, 4vw, 3.5rem);
     font-weight: 400; line-height: 1.2;
     color: var(--dark);
@@ -220,7 +225,7 @@
   }
   .about-text + .about-text { margin-top: 0; }
   .about-quote {
-    font-family: 'Cinzel', serif;
+    font-family: var(--font-serif);
     font-size: 1.4rem; font-style: italic; font-weight: 400;
     color: var(--gold); line-height: 1.5;
     border-left: 2px solid var(--gold-light);
@@ -347,12 +352,12 @@
   .service-card:hover { background: var(--ivory); }
   .service-card:hover::before { height: 100%; }
   .service-num {
-    font-family: 'Cinzel', serif;
+    font-family: var(--font-serif);
     font-size: 2.5rem; font-weight: 400; color: rgba(130, 142, 125, 0.3);
     line-height: 1; margin-bottom: 1.5rem;
   }
   .service-name {
-    font-family: 'Cinzel', serif;
+    font-family: var(--font-serif);
     font-size: 1.4rem; font-weight: 500; color: var(--dark);
     margin-bottom: 1rem;
   }
@@ -386,7 +391,7 @@
     max-width: 450px; margin: 0 auto 3.5rem;
   }
   .contact-email {
-    font-family: 'Cinzel', serif;
+    font-family: var(--font-serif);
     font-size: clamp(1.2rem, 3.5vw, 2.2rem);
     color: var(--gold-light); font-weight: 400;
     letter-spacing: 0.05em;
